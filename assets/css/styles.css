@@ -1,0 +1,138 @@
+/* Reset */
+* {
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #0056d6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .hero {
+    position: relative;
+  }
+  
+  .hero-image {
+    width: 10%;
+    height: auto;
+    animation: slideIn 5s infinite alternate, resizeWidth 5s infinite alternate;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f898a8;
+    padding: 20px;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle:hover {
+    transform: scale(1.1);
+  }
+  
+  .rectangle {
+    width: 300px;
+    height: 150px;
+    background-color: #87cefa;
+  }
+  
+  .cta {
+    position: relative;
+    text-align: center;
+  }
+  
+  .cta-image {
+    width: 100%;
+    height: auto;
+    animation: zoom 10s infinite alternate;
+  }
+  
+  .cta-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056d6;
+    color: white;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Nueva animación para ajustar el ancho dinámicamente */
+@keyframes resizeWidth {
+    0% {
+      width: 10%;
+    }
+    100% {
+      width: 15%; /* Ajusta este valor para determinar el ancho máximo */
+    }
+  }
+  
